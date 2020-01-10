@@ -6,4 +6,10 @@ module.exports.expressFunctions = function(app) {
         })
     
     })
+    app.get('/auth',(req,res)=>{
+        if(req.query.email==='p.saiaakash517@gmail.com' && req.query.pass==='aakash'){
+            res.json({username: 'aakash', id: 'asdf'})
+        }
+        else res.send(false)
+    })
 }
